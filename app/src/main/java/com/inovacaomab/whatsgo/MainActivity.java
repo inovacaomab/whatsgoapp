@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private WebView myWebView;
 //nova tentativa 14:27
-    //funcionou?
+    //funcionou? - SIMMMM
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
