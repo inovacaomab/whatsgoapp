@@ -1,76 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6742040663921517"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's Go APP</title>
-    <meta name="description" content="What's Go APP - Acesse facilmente seu APP de mensagens.">
+    <title data-i18n="pageTitle">What's Go APP</title>
+    <meta name="description" data-i18n="metaDescription" content="What's Go APP - Acesse facilmente seu APP de mensagens.">
     <meta name="keywords" content="What's Go, Inovação MAB, WhatsApp, Comunicação, Simples, Funcional">
     <meta name="author" content="Inovação MAB">
-    <meta property="og:title" content="What's Go APP"/>
-    <meta property="og:description" content="Simplifique o acesso ao seu app de mensagens com What's Go!"/>
+    <meta property="og:title" data-i18n="ogTitle" content="What's Go APP"/>
+    <meta property="og:description" data-i18n="ogDescription" content="Simplifique o acesso ao seu app de mensagens com What's Go!"/>
     <meta property="og:image" content="https://example.com/thumbnail.jpg"/>
     <meta property="og:url" content="https://www.inovacaomab.com/whatsgoapp">
+    
+    <!-- Seus CSS existentes -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Scripts existentes -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0YQTBMJMDF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0YQTBMJMDF');
-</script>
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6742040663921517"
-     crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YQTBMJMDF"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6742040663921517" crossorigin="anonymous"></script>
+    
     <link rel="icon" type="image/x-icon" href="iconezinho.ico">
+    
+    <style>
+        /* Estilo para o seletor de idioma */
+        .language-selector {
+            text-align: center;
+            margin: 15px 0;
+        }
+        
+        #languageSelect {
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            background-color: white;
+            cursor: pointer;
+        }
+        
+        #languageSelect:hover {
+            border-color: #999;
+        }
+        
+        /* Mantém os estilos existentes do seu site e apenas ajusta o container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <img src="iconeprincipal.jpg" alt="What's Go Logo" id="logo">
         <h1 id="appName">What's Go</h1>
-        <input type="tel" id="phoneNumber" placeholder="(xx) xxxxx-xxxx">
-        <textarea id="messageText" placeholder="Digite sua mensagem aqui..."></textarea>
-        <button onclick="openWhatsApp()">Iniciar Chat</button>
-        <br><br><br><br><!--
-		<div class="bottom-icons">
-				<b id="developed">Crie seu QR CODE Gratuitamente:</b><br>
-				<br>
-				<a href="https://www.whatsgo.app.br/qrgene_free/index_jquery.html" target="_blank">
-				<img src="qricon.jpg" alt="Gere seu QR CODE Gratuitamente" id="logo" onclick="Gere seu QR CODE Gratuitamente" title="Gere seu QR CODE Gratuitamente!"></a><br>
-				<p><span style="color: #d3d3d3;">*melhor desempenho no Google Chrome</p>
-        	</div> -->
-			<br><br>
-       <footer>
-            <p id="developed">Desenvolvido por <a href="https://www.inovacaomab.com">Inovação MAB</a> <br>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/whats_go_app" target="_blank" onclick="trackSocialClick('Instagram')" title="Siga nossa bio!"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@whatsgoapp" target="_blank" onclick="trackSocialClick('YouTube')" title="Se inscreva agora mesmo!"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.linkedin.com/company/inovacao-mab/" target="_blank" onclick="trackSocialClick('LinkedIn')" title="Siga nossa page!"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://whatsapp.com/channel/0029Va5uO93FcowAHRjvWP0k" target="_blank" onclick="trackSocialClick('WhatsApp')" title="Participe do Canal!"><i class="fab fa-whatsapp"></i></a> <br>
-                    <br>
-                    <a href="https://play.google.com/store/apps/details?id=com.inovacaomab.whatsgo" target="_blank" onclick="trackSocialClick('Instale o APP da Play Store')" title="Instale o APP para ANDROID!"><i class="fab fa-google-play"></i></a>
-                    
-                </div>
+        <input type="tel" id="phoneNumber" data-i18n-placeholder="phonePlaceholder">
+        <textarea id="messageText" data-i18n-placeholder="messagePlaceholder"></textarea>
+        <button onclick="openWhatsApp()" data-i18n="startChat">Iniciar Chat</button>
+
+        <!-- Seletor de idioma movido para depois do botão -->
+        <div class="language-selector">
+            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                <option value="pt-BR">Português</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+
+        <footer>
+            <p id="developed">
+                <span data-i18n="developedBy">Desenvolvido por</span> 
+                <a href="https://www.inovacaomab.com">Inovação MAB</a>
             </p>
-            <p id="glory">A DEUS toda a Glória!</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/whats_go_app" target="_blank" onclick="trackSocialClick('Instagram')" data-i18n-title="followInstagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@whatsgoapp" target="_blank" onclick="trackSocialClick('YouTube')" data-i18n-title="subscribeYoutube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/inovacao-mab/" target="_blank" onclick="trackSocialClick('LinkedIn')" data-i18n-title="followLinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://whatsapp.com/channel/0029Va5uO93FcowAHRjvWP0k" target="_blank" onclick="trackSocialClick('WhatsApp')" data-i18n-title="joinChannel"><i class="fab fa-whatsapp"></i></a>
+                <br><br>
+                <a href="https://play.google.com/store/apps/details?id=com.inovacaomab.whatsgo" target="_blank" onclick="trackSocialClick('Instale o APP da Play Store')" data-i18n-title="installAndroid"><i class="fab fa-google-play"></i></a>
+            </div>
+            <p id="glory" data-i18n="gloryMessage">A DEUS toda a Glória!</p>
         </footer>
     </div>
+
+    <!-- Dicionário de traduções -->
     <script>
-        function trackSocialClick(serviceName) {
-            gtag('event', 'click', {
-                'event_category': 'Social Media',
-                'event_label': serviceName
+        const translations = {
+            'pt-BR': {
+                pageTitle: "What's Go APP",
+                metaDescription: "What's Go APP - Acesse facilmente seu APP de mensagens.",
+                ogTitle: "What's Go APP",
+                ogDescription: "Simplifique o acesso ao seu app de mensagens com What's Go!",
+                phonePlaceholder: "(xx) xxxxx-xxxx",
+                messagePlaceholder: "Digite sua mensagem aqui...",
+                startChat: "Iniciar Chat",
+                developedBy: "Desenvolvido por",
+                followInstagram: "Siga nossa bio!",
+                subscribeYoutube: "Se inscreva agora mesmo!",
+                followLinkedIn: "Siga nossa page!",
+                joinChannel: "Participe do Canal!",
+                installAndroid: "Instale o APP para ANDROID!",
+                gloryMessage: "A DEUS toda a Glória!",
+                phoneError: "Por favor, insira um número de telefone."
+            },
+            'en': {
+                pageTitle: "What's Go APP",
+                metaDescription: "What's Go APP - Easily access your messaging APP.",
+                ogTitle: "What's Go APP",
+                ogDescription: "Simplify access to your messaging app with What's Go!",
+                phonePlaceholder: "Enter your phone number",
+                messagePlaceholder: "Type your message here...",
+                startChat: "Start Chat",
+                developedBy: "Developed by",
+                followInstagram: "Follow our bio!",
+                subscribeYoutube: "Subscribe now!",
+                followLinkedIn: "Follow our page!",
+                joinChannel: "Join the Channel!",
+                installAndroid: "Install APP for ANDROID!",
+                gloryMessage: "To GOD be all the Glory!",
+                phoneError: "Please enter a phone number."
+            },
+            'es': {
+                pageTitle: "What's Go APP",
+                metaDescription: "What's Go APP - Accede fácilmente a tu APP de mensajes.",
+                ogTitle: "What's Go APP",
+                ogDescription: "¡Simplifica el acceso a tu app de mensajes con What's Go!",
+                phonePlaceholder: "Ingresa tu número de teléfono",
+                messagePlaceholder: "Escribe tu mensaje aquí...",
+                startChat: "Iniciar Chat",
+                developedBy: "Desarrollado por",
+                followInstagram: "¡Sigue nuestra bio!",
+                subscribeYoutube: "¡Suscríbete ahora!",
+                followLinkedIn: "¡Sigue nuestra página!",
+                joinChannel: "¡Únete al Canal!",
+                installAndroid: "¡Instala la APP para ANDROID!",
+                gloryMessage: "¡A DIOS sea toda la Gloria!",
+                phoneError: "Por favor, ingresa un número de teléfono."
+            }
+        };
+
+        // Função para detectar o idioma do navegador
+        function detectLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const shortLang = browserLang.split('-')[0];
+            
+            // Verifica se temos suporte para o idioma detectado
+            if (translations[browserLang]) {
+                return browserLang;
+            } else if (translations[shortLang]) {
+                return shortLang;
+            }
+            
+            return 'pt-BR'; // Idioma padrão
+        }
+
+        // Função para atualizar todos os textos da página
+        function updatePageLanguage(lang) {
+            document.documentElement.lang = lang;
+            const texts = translations[lang];
+
+            // Atualiza meta tags
+            document.title = texts.pageTitle;
+            document.querySelector('meta[name="description"]').content = texts.metaDescription;
+            document.querySelector('meta[property="og:title"]').content = texts.ogTitle;
+            document.querySelector('meta[property="og:description"]').content = texts.ogDescription;
+
+            // Atualiza placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                element.placeholder = texts[key];
+            });
+
+            // Atualiza textos
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.textContent = texts[key];
+            });
+
+            // Atualiza títulos
+            document.querySelectorAll('[data-i18n-title]').forEach(element => {
+                const key = element.getAttribute('data-i18n-title');
+                element.title = texts[key];
             });
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
+        // Função para mudar o idioma
+        function changeLanguage(lang) {
+            updatePageLanguage(lang);
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuração do telefone internacional
             var phoneNumberInput = document.querySelector('#phoneNumber');
             var iti = window.intlTelInput(phoneNumberInput, {
                 initialCountry: 'br',
@@ -79,12 +207,19 @@
                 utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
             });
 
+            // Configuração do idioma
+            const savedLanguage = localStorage.getItem('preferredLanguage') || detectLanguage();
+            document.querySelector('#languageSelect').value = savedLanguage;
+            updatePageLanguage(savedLanguage);
+
+            // Função para abrir WhatsApp
             window.openWhatsApp = function() {
                 var message = encodeURIComponent(document.querySelector('#messageText').value);
                 var phoneNumber = phoneNumberInput.value.replace(/\D/g,'');
                 var countryData = iti.getSelectedCountryData();
                 var dialCode = countryData.dialCode;
                 phoneNumber = '+' + dialCode + phoneNumber;
+                
                 if (phoneNumber) {
                     var url = `https://wa.me/${phoneNumber}`;
                     if (message) {
@@ -97,10 +232,25 @@
                         'value': phoneNumber
                     });
                 } else {
-                    alert('Por favor, insira um número de telefone.');
+                    const lang = document.documentElement.lang;
+                    alert(translations[lang].phoneError);
                 }
             }
         });
+
+        // Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0YQTBMJMDF');
+
+        // Função para rastrear cliques em redes sociais
+        function trackSocialClick(serviceName) {
+            gtag('event', 'click', {
+                'event_category': 'Social Media',
+                'event_label': serviceName
+            });
+        }
     </script>
 </body>
 </html>
