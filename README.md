@@ -1,11 +1,13 @@
 # What's Go APP
 
+![MIT License](https://img.shields.io/badge/license-MIT-green.svg)
+
 Projeto desenvolvido por [Inovação MAB](https://www.inovacaomab.com), com o objetivo de facilitar o acesso ao WhatsApp, geração de QR Codes e integração de canais de comunicação em múltiplos idiomas.
 
 ## ✨ Funcionalidades
 
 - **Envio rápido de mensagens pelo WhatsApp:** Preencha o número e a mensagem e inicie uma conversa sem precisar adicionar o contato.
-- **Seleção de idiomas:** Suporte multinlíngue (Português, Inglês, Espanhol, Francês, Alemão, Italiano, Hebraico).
+- **Seleção de idiomas:** Suporte multilíngue (Português, Inglês, Espanhol, Francês, Alemão, Italiano, Hebraico).
 - **Geração gratuita de QR Code:** Ferramenta para criar e baixar QR Codes a partir de links.
 - **Links para doação:** Apoie o projeto via PayPal, Pix, etc.
 - **Links para redes sociais e canal WhatsApp.**
@@ -59,7 +61,7 @@ whatsgoapp/
 
 ## 💡 Licença
 
-Este projeto está sob a licença MIT.
+Este projeto está licenciado sob os termos da licença [MIT](LICENSE).
 
 ---
 
