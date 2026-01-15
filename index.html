@@ -109,12 +109,17 @@
             position: fixed;
             right: 16px;
             bottom: 16px;
-            padding: .6rem .8rem;
-            border-radius: 8px;
+            width: auto;                /* nunca ocupar largura total */
+            max-width: max-content;     /* ajusta ao conteúdo */
+            white-space: nowrap;        /* impede quebra de linha */
+            padding: .35rem .55rem;
+            border-radius: 6px;
             background: #25D366;
             color: #fff;
             border: none;
-            box-shadow: 0 2px 6px rgba(0,0,0,.2);
+            font-size: 12px;
+            line-height: 1;
+            box-shadow: 0 1px 4px rgba(0,0,0,.18);
             z-index: 9999;
             cursor: pointer;
         }
