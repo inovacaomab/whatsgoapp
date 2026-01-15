@@ -105,22 +105,27 @@
 
         /* Botão de instalação PWA (fixo) */
         #btn-install {
-            display: none; /* mostrado apenas quando beforeinstallprompt disparar ou quando aplicável */
-            position: fixed;
-            right: 14px;
-            bottom: 14px;
-            padding: .35rem .55rem;      /* altera tamanho */
-            border-radius: 6px;        /* altera para mais sutil */
-            background: #25D366;
-            color: #fff;
-            border: none;
-            font-size: 12px;            /* texto menor */
-            line-height: 1;
-            box-shadow: 0 1px 4px rgba(0,0,0,.18);
-            opacity: .85;               /* discreto incluso na alteracao do botao*/
-            z-index: 9999;
-            cursor: pointer;
-        }
+    display: inline-flex;        /* em vez de block */
+    align-items: center;
+    justify-content: center;
+    width: auto;                 /* impede largura total */
+    max-width: max-content;      /* ajusta ao conteúdo */
+    right: 16px;
+    bottom: 16px;
+    padding: .35rem .55rem;
+    border-radius: 6px;
+    background: #25D366;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    line-height: 1;
+    box-shadow: 0 1px 4px rgba(0,0,0,.18);
+    opacity: .85;
+    z-index: 9999;
+    cursor: pointer;
+    white-space: nowrap;         /* evita quebra em duas linhas */
+}
+
 
         /* Modal/overlay para instruções iOS */
         #a2hs-ios {
@@ -206,7 +211,7 @@
     </div>
 
     <!-- Botão de instalação PWA (inserido sem alterar estrutura) -->
-    <button id="btn-install" aria-label="Instalar aplicativo">Instalar o APP</button>
+    <button id="btn-install" aria-label="Instalar aplicativo">Download do APP</button>
 
     <!-- Modal/overlay para instruções iOS -->
     <div id="a2hs-ios" role="dialog" aria-hidden="true">
